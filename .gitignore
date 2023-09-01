@@ -1,0 +1,4 @@
+data/*
+server/local-data
+server/local-redis-stack.conf
+server/mysql-data
