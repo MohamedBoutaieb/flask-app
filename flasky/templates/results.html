@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+    <title> Recommendation de véhicules </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            Liste des véhicules correspondantes
+        </div>
+        <div class="content">
+            {% for vehicule in vehicules %}
+            <div class="table-container">
+                <table border="1">
+                    <tr>
+                        <th>Column Name</th>
+                        <th>Value</th>
+                    </tr>   
+                    <tr>
+                        <td>Id</td>
+                        <td>{{vehicule[0]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{vehicule[1]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>{{vehicule[2]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Selling Price</td>
+                        <td>{{vehicule[3]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Km driven</td>
+                        <td>{{vehicule[4]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Fuel</td>
+                        <td>{{vehicule[5]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Seller Type</td>
+                        <td>{{vehicule[6]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Transmission</td>
+                        <td>{{vehicule[7]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Mileage</td>
+                        <td>{{vehicule[8]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Engine</td>
+                        <td>{{vehicule[9]}}</td>
+                    </tr>
+                    <tr>
+                        <td>Max power</td>
+                        <td>{{vehicule[10]}}</td>
+                    </tr>
+                </table>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
